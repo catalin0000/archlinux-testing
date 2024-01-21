@@ -1,9 +1,9 @@
-echo "deb http://http.kali.org/kali kali-rolling main non-free contrib" >> /etc/apt/sources.list
-echo "deb http://kali.download/kali kali-rolling main non-free contrib" >> /etc/apt/sources.list
-wget https://archive.kali.org/archive-key.asc -O /etc/apt/trusted.gpg.d/kali-archive-keyring.asc
-apt update
-apt --fix-broken install
-apt -y upgrade
-apt -y dist-upgrade
-apt -y autoremove --purge
-apt -y install kali-linux-everything
+pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+pacman-key --lsign-key 3056513887B78AEB
+pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
+pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+
+echo '[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist' >> /etc/pacman.conf
+
+
+
