@@ -1,1 +1,1 @@
-whatever easy script to make kali from a debian install
+whatever easy script to make an arch linux ready for testing
