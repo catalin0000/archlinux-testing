@@ -4,6 +4,4 @@ pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst
 pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
 echo '[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist' >> /etc/pacman.conf
-
-
-
+echo '\n[blackarch]\nSigLevel = Never\nServer = https://blackarch.org/blackarch/$repo/os/$arch\n' >> /etc/pacman.conf
