@@ -17,16 +17,16 @@ WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
 export PROMPT_EOL_MARK=""
 
 # configure key keybindings
-bindkey -e                                        # emacs key bindings
-bindkey ' ' magic-space                           # do history expansion on space
-bindkey '^[[3;5~' kill-word                       # ctrl + Supr
-bindkey '^[[1;5C' forward-word                    # ctrl + ->
-bindkey '^[[C' forward-word                       # ctrl + ->
-bindkey '^[[1;5D' backward-word                   # ctrl + <-
-bindkey '^[[D' backward-word                      # ctrl + <-
-bindkey '^[[5~' beginning-of-buffer-or-history    # page up
-bindkey '^[[6~' end-of-buffer-or-history          # page down
-bindkey '^[[Z' undo                               # shift + tab undo last action
+#bindkey -e                                        # emacs key bindings
+#bindkey ' ' magic-space                           # do history expansion on space
+#bindkey '^[[3;5~' kill-word                       # ctrl + Supr
+#bindkey '^[[1;5C' forward-word                    # ctrl + ->
+#bindkey '^[[C' forward-word                       # ctrl + ->
+#bindkey '^[[1;5D' backward-word                   # ctrl + <-
+#bindkey '^[[D' backward-word                      # ctrl + <-
+#bindkey '^[[5~' beginning-of-buffer-or-history    # page up
+#bindkey '^[[6~' end-of-buffer-or-history          # page down
+#bindkey '^[[Z' undo                               # shift + tab undo last action
 
 # enable completion features
 autoload -Uz compinit
@@ -82,12 +82,12 @@ if [ "$color_prompt" = yes ]; then
     RPROMPT=$'%(?.. %? %F{red}%B⨯%b%F{reset})%(1j. %j %F{yellow}%B⚙%b%F{reset}.)'
 
     # enable syntax-highlighting
-    if [ -f /home/placeDirectoryorUserNameHere/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && [ "$color_prompt" = yes ]; then
+    if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && [ "$color_prompt" = yes ]; then
 	# ksharrays breaks the plugin. This is fixed now but let's disable it in the
 	# meantime.
 	# https://github.com/zsh-users/zsh-syntax-highlighting/pull/689
 	unsetopt ksharrays
-	. /home/placeDirectoryorUserNameHere/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	. /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 	ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 	ZSH_HIGHLIGHT_STYLES[default]=none
 	ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red,bold
