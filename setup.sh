@@ -10,6 +10,8 @@ echo '\n\n[blackarch]\nSigLevel = Never\nServer = https://blackarch.org/blackarc
 pacman -Syy
 pacman -Syu
 pacman -S zsh
+pacman -S noto-color-emoji-fontconfig
+pacman -S zsh-syntax-highlighting
 
 cp .zshrc /home/*/.
 cp .zshrc /root/.
