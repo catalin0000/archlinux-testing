@@ -11,7 +11,7 @@ pacman -Syy
 pacman -Syu
 pacman -S zsh
 pacman -S noto-color-emoji-fontconfig
-pacman -S zsh-syntax-highlighting
+pacman -S zsh-syntax-highlighting zsh-autosuggestions
 
 cp .zshrc /home/*/.
 cp .zshrc /root/.
